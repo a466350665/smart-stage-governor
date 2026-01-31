@@ -1,6 +1,6 @@
 # Smart Stage Governor
 
-基于 [Smart Stage](https://github.com/a466350665/smart-stage) 技术底座的多模块示例工程，包含一个聚合启动的应用与两个可独立部署的示例服务。
+基于 [Smart Stage](https://github.com/a466350665/smart-stage) 技术底座的应用聚合工程，包含一个聚合启动的应用与两个可独立部署的示例服务。
 主要演示：MyBatis-Plus 数据访问、OpenFeign 跨模块调用、Nacos 服务发现、基础 CRUD 与分页能力。
 
 ## 模块说明
