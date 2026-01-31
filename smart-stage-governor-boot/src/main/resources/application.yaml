@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    root: info
+
+spring:
+  application:
+    name: smart-stage-governor
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+  datasource: # 数据库连接(可选，smart-stage-starter-mybatisplus时必选)
+    url: jdbc:mysql://127.0.0.1:3306/smart-stage-sample1?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: 123456

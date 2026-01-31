@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.smart</groupId>
+        <artifactId>smart-stage-governor</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <artifactId>smart-stage-governor-boot</artifactId>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <!-- 服务模块1-->
+        <dependency>
+            <groupId>com.smart</groupId>
+            <artifactId>smart-stage-sample1-service</artifactId>
+        </dependency>
+        <!-- 服务模块2-->
+        <dependency>
+            <groupId>com.smart</groupId>
+            <artifactId>smart-stage-sample2-service</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>smart-stage-governor</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>com.smart.BootApplication</mainClass>
+                    <includeSystemScope>false</includeSystemScope>
+                    <layout>ZIP</layout>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

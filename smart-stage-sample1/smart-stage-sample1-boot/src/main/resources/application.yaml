@@ -1,0 +1,37 @@
+server:
+  port: 8081
+
+logging:
+  level:
+    root: info
+
+spring:
+  application:
+    name: smart-stage-sample1
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+  datasource: # 数据库连接(可选，smart-stage-starter-mybatisplus时必选)
+    url: jdbc:mysql://127.0.0.1:3306/smart-stage-sample1?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        server-addr: 127.0.0.1:8848
+
+# 监控
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    env:
+      show-values: ALWAYS
+    configprops:
+      show-values: ALWAYS
